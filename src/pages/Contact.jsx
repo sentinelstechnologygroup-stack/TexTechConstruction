@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import PageBanner from "../components/shared/PageBanner";
 import QuoteForm from "../components/shared/QuoteForm";
 
-const BANNER = "/images/heros/textech-hero.png";
+const BANNER = "/images/heros/contact-hero.png";
 
 const CONTACT_INFO = [
   { icon: Phone, label: "Phone", value: "(832) 755-6533", href: "tel:8327556533" },
