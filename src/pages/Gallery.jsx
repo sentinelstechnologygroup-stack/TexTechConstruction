@@ -15,7 +15,7 @@ const GALLERY_ITEMS = [
   { src: "/images/gallery/home-exterior.png", alt: "Renovated home exterior", category: "Patios" },
 ];
 
-const BANNER = "/images/gallery/home-exterior.png";
+const BANNER = "/images/heros/gallery-hero.png";
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
