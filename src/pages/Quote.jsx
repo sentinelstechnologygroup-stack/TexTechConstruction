@@ -33,7 +33,7 @@ export default function Quote() {
                   Request Your Free Estimate
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  We understand that your choice is an important decision, and we guarantee you will be glad you chose us! Fill out the form and one of our sales professionals will contact you as soon as possible.
+                  Your choice is an important decision. Please call or email us to discuss your project and request an estimate while online quote requests are unavailable.
                 </p>
               </div>
 
