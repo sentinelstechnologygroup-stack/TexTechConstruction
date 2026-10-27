@@ -1,0 +1,41 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/quote",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/gallery",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/kitchens",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/bathrooms",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/patios",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/roofing",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/windows",
+      "destination": "/index.html"
+    }
+  ]
+}
