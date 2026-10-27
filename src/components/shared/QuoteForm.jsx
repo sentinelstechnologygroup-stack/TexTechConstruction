@@ -3,35 +3,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Send, CheckCircle } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function QuoteForm({ compact = false }) {
-  const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", service: "", message: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmissionError("Your request has not been sent. Online quote requests are currently unavailable.");
   };
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
-        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
-          <CheckCircle className="w-8 h-8 text-accent" />
-        </div>
-        <h3 className="text-xl font-semibold">Thank You!</h3>
-        <p className="text-muted-foreground max-w-sm">
-          We've received your request. A TexTech team member will contact you within 24 hours.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <p className="text-sm text-muted-foreground">
+        For a quote, call <a href="tel:8327556533" className="underline">(832) 755-6533</a> or email{" "}
+        <a href="mailto:Info@TexTechConstruction.com" className="underline">Info@TexTechConstruction.com</a>.
+        Online requests are currently unavailable.
+      </p>
+      {submissionError && (
+        <p role="alert" className="text-sm text-red-700">{submissionError}</p>
+      )}
       <div className={`grid gap-4 ${compact ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"}`}>
         <Input
           placeholder="Full Name *"
